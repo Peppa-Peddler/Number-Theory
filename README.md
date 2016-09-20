@@ -16,3 +16,8 @@ The Natural numbers are formal defined by the **Peano axioms**:
 
 The fifth axiom is called the **axiom of induction**. If `s(n) = n + 1`, this
 axiom also works if `0, 1, 2, 3, 4, ..., n-1 belongs to S` implies `n belongs to S`.
+
+## Divisibility
+>A divisibility rule is a shorthand way of determining whether a given number is divisible by a fixed divisor without performing the division, usually by examining its digits.
+
+We say `d` *divides* `n` and we write `d | n` if `n = cd` for some `c`, where `d, n, c, d` are integers. We also say that `n` is a *multiple* of `d`, `d` is a *divider* of `n`, or `d` is a factor of `n`.
