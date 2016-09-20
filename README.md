@@ -97,4 +97,18 @@ Given `a` and `n`, `a mod n` is the remainder of the *Euclidean division* of
 by `n`.
 
 **Calculation:** from the *Division theorem* we have: `a mod n = a - [a / b]b`,
-where [x] is the floor operator.
+where `[x]` is the `floor` operator.
+
+### Congruence
+
+`a ≡ b (mod m)` (which is read as *a is congruent to b module m*) if `a mod m = b mod b`.
+
+Let `a' ≡ a (mod m)` and `b' ≡ b (mod m)`:
+
+1. `a ≡ b (mod m)` and `b ≡ c (mod m)`, then `a ≡ c (mod m)`
+2. `a + b ≡ a' + b' (mod m)`
+3. `a - b ≡ a' - b' (mod m)`
+4. `ab ≡ a' b' (mod m)`
+5. `a ≡ b (mod m)` implies `ka ≡ kb (mod m)`
+6. `a ≡ b (mod m)` implies 'a^n ≡ b^n (mod m)'
+7. If `a ≡ b (mod m)`, then `P(a) ≡ P(b)`, for `P(x)` a *polynomial*.
