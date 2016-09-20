@@ -3,7 +3,15 @@
 
 ##Natural Numbers and Peano axioms
 
-> Italian mathematician Giuseppe Peano
+> In mathematics, the natural numbers are those used for counting and ordering.
 
-Natural numbers are formal defined by the Peano axioms:
+The Natural numbers are formal defined by the **Peano axioms**:
 
+1. *0* is a natural number.
+2. Every Natural number `n` has a succesor, and is denoted as `s(n)`.
+3. *0* is not the succesor of any natural number: `s(n) != 0`.
+4. If `s(x) = s(y)`, then `x = y`.
+5. If *0* belongs to a `set S`, and `n belongs to S` implies `s(n) belongs to S`;
+   then `Every natural number belongs to S`
+
+The fifth property is called the **axiom of induction**.
