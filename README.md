@@ -1,7 +1,10 @@
-#Number Theory
+# Number Theory
 > The branch of mathematics that deals with the properties and relationships of numbers, especially the positive integers.
 
-##Natural Numbers and Peano axioms
+## Integer numbers
+> An integer is a number that can be written without a fractional component
+
+## Peano axioms
 
 > In mathematics, the natural numbers are those used for counting and ordering.
 
@@ -24,6 +27,8 @@ We say `d` *divides* `n` and we write `d | n` if `n = cd` for some `c`, where `d
 
 ### Properties:
 
+`a, b, c, d, e, ..., n` are integers.
+
 1. `n | n` (reflection)
 2. `d | n` and `n | m` implies `d | m` (Transitivity)
 3. `d | n` and `d | m` implies `d | ( an + bm )` (Linearity)
@@ -35,4 +40,3 @@ We say `d` *divides* `n` and we write `d | n` if `n = cd` for some `c`, where `d
 9. `d | n` and `n != 0` implies `|d| <= |n|`
 9. `d | n` and `n | d` implies `|d| = |n|`
 10. `d | n` and `d != 0` implies `(n/d) | n`
-6. 
