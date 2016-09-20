@@ -49,6 +49,9 @@ We say `d` *divides* `n` and we write `d | n` if `n = cd` for some `c`, where `d
 9. `d | n` and `n | d` implies `|d| = |n|`
 10. `d | n` and `d != 0` implies `(n/d) | n`
 
+*Division Theorem:* For any number `a` and `b != 0`, exists `q > 0` and `r` with `0 <= r < q`, such
+that: `a = qb + r`
+
 ## Greatest Common Divisor
 
 If an integer `d` divides two integers `a` and `b`, then `d` is called *Common Divisor* of `a` and `b`.
@@ -78,3 +81,19 @@ itself. If `n > 1` and is not prime, then is called 'composite'.
 3. If a prime `p` doesn't divide `a`, then `(p,a) = 1`
 4. If `p` is prime and `p | ab`, then `p | a` or `p | b`. In general if `p |
    a1 ... an`, then there is at least one `i` such that `p | ai`.
+
+## Fundamental Theorem of arithmetic
+
+Every integer `n > 1` can be represented as a product of prime factors in a
+**unique way**. [proof] (https://en.wikipedia.org/wiki/Fundamental_theorem_of_arithmetic).
+
+## Modulo operation
+
+> the modulo operation finds the remainder after division of one number by
+> another
+
+Given `a` and `n`, `a mod n` is the remainder of the *Euclidean division* of a
+by n.
+
+**Calculation:** from the *Division theorem* we have: `a mod n = a - [a / b]b`,
+where [x] is the floor operator.
