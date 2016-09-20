@@ -8,9 +8,12 @@
 3. [Divisibility] (#divisibility)
 4. [Greatest Common Divisor] (#greatest-common-divisor)
 5. [Prime Numbers] (#prime-numbers)
-5. [Fundamental Theorem of Arithmetic] (#fundamental-theorem-of-arithmetic)
-5. [Modulo Operation] (#modulo-operation)
-5. [Euclidean Algorithm] (#euclidean-algorithm)
+6. [Fundamental Theorem of Arithmetic] (#fundamental-theorem-of-arithmetic)
+7. [Modulo Operation] (#modulo-operation)
+8. [Euclidean Algorithm] (#euclidean-algorithm)
+0. [Fermat's little theorem] (#fermats-little-theorem)
+8. [Modular exponentiation] (#modular-exponentiation)
+8. [Modular inverses] (#modular-inverses)
 
 ## Integer numbers
 > An integer is a number that can be written without a fractional component
