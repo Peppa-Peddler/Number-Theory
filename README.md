@@ -92,8 +92,9 @@ Every integer `n > 1` can be represented as a product of prime factors in a
 > the modulo operation finds the remainder after division of one number by
 > another
 
-Given `a` and `n`, `a mod n` is the remainder of the *Euclidean division* of a
-by n.
+Given `a` and `n`, `a mod n` is the remainder of the *Euclidean division* of
+`a`
+by `n`.
 
 **Calculation:** from the *Division theorem* we have: `a mod n = a - [a / b]b`,
 where [x] is the floor operator.
