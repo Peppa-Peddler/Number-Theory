@@ -126,7 +126,7 @@ that `(a, b) = (a - b, b)`. Let `d = (a, b)` and `e = (a - b, b)`, then `d | a -
 with `d <= e` (1). Since `e | a - b` and `e | b`, then `e | a` and we have `e <= d` (2). From (1) and (2)
 we have `(a, b) = (a - b, b)`.
 
-###Algorithm:
+### Algorithm:
 
 [[c++](codes/euclides.cpp)] [[clojure](codes/euclides.clj)]
 
@@ -135,7 +135,7 @@ gcd a 0 = a
 gcd a b = gcd b (mod a b)
 ```
 
-###Extended algorithm:
+### Extended algorithm:
 The extended algorithm returns the value of `x` and `y` from the *Bézout's identity*: `ax + by = (a, b)`.
 
 **Solution:** Given `x'` and `y'` from `x'b + y'(a mod b) = (b , a mod b) = (a, b)`,
@@ -150,12 +150,24 @@ Code: [[c++](codes/euclides_extended.cpp)]
 
 *Proofs:* [wiki](https://en.wikipedia.org/wiki/Proofs_of_Fermat%27s_little_theorem)
 
-A variation of this theorem is when `a` is not divisible by `p`, then we can
-divide both sides by a: `a^(p-1) ≡ 1 (mod p)`.
+When `a` is not divisible by `p`, then we can
+divide both sides by `a`: `a^(p-1) ≡ 1 (mod p)`.
 
-*Proof* of `a^(p-1) = 1 (mod p)` with `p` prime and `a` not divisible by `p`:
+*Proof* of `a^(p-1) ≡ 1 (mod p)` with `p` prime and `a` not divisible by `p`:
 Let `S = {1, 2, 3, ..., p - 1}` and `i` and `j` two elements of `S`, if `ia ≡ ja (mod p)`
 then `i ≡ j (mod p)` and since `i, j < p` we have `i = j`. This means if `i !=
 j` then `ia != ja (mod p)`, with this we have `1a x 2a x 3a ... (p-1)a ≡ 1 x 2
 3 ... (p-1) (mod p)`, then `(p-1)! a^(p-1) ≡ (p-1)! (mod p)`. Since p is prime
 `((p-1)!,p) = 1`. We end up with `a^(p-1) ≡ 1 (mod p)`.
+
+Fermat's theorem is a variation of [Euler's totient theorem](https://en.wikipedia.org/wiki/Euler%27s_theorem)
+
+## Modular exponentiation
+
+**Problem:** Find `x < c` such that `a^b = x (mod c)` where `a, b, c` are integers.
+
+**Algorithm:** If `b = 0`, then x = 1. If b is pair then let `x'` in `a^(b/2) ≡ x'
+(mod c)` and `x ≡ x'^2 (mod c)`, otherwhise with 'x' ≡ a^(b-1/2) (mod c)' we
+have `x ≡ ax^2 (mod c)`.
+
+Code: [[c++](codes/mod_exp.cpp)]
