@@ -167,7 +167,19 @@ Fermat's theorem is a variation of [Euler's totient theorem](https://en.wikipedi
 **Problem:** Find `x < c` such that `a^b = x (mod c)` where `a, b, c` are integers.
 
 **Algorithm:** If `b = 0`, then x = 1. If b is pair then let `x'` in `a^(b/2) ≡ x'
-(mod c)` and `x ≡ x'^2 (mod c)`, otherwhise with 'x' ≡ a^(b-1/2) (mod c)' we
+(mod c)` and `x ≡ x'^2 (mod c)`, otherwhise with `x' ≡ a^(b-1/2) (mod c)` we
 have `x ≡ ax^2 (mod c)`.
 
 Code: [[c++](codes/mod_exp.cpp)]
+
+## Modular inverses
+
+Is there a number `x` for some `a, n` both integers, such that: `ax ≡ 1 (mod n)`? We would call this number x the **inverse of** `a` **modulo** `n`, and this number exists when `a` and `n` are *coprimes*.
+
+`a` and `n` are coprimes since `ax ≡ 1 (mod n)` implies `n | ax - 1`. The
+reverse is prooved by the **Bézout's identity**: `ax + ny = 1` so `ax + ny ≡
+1 (mod n)`, then `ax ≡ 1 (mod n)`. With this, `x` can be found by using the **Extended Euclidean algorithm**.
+
+If `n` is prime, We can find the inverse by considering the **The Fermat's little
+theorem**: `a ^ (n-1) ≡ 1 (mod n)`, We have `aa^(n-2) ≡ 1 (mod n)`; So `x =
+a^(n-2)`. Here we can use the **Modular Exponentiation**.
