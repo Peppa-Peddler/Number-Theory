@@ -15,7 +15,7 @@ The Natural numbers are formal defined by the **Peano axioms**:
 3. 0 is not the succesor of any natural number: `s(n) != 0`.
 4. If `s(x) = s(y)`, then `x = y`.
 5. If 0 belongs to a `set S`, and `n belongs to S` implies `s(n) belongs to S`;
-   then `Every natural number belongs to S`
+   then `Every natural number belongs to S`.
 
 The fifth axiom is called the **axiom of induction**. If `s(n) = n + 1`, this
 axiom also works if `0, 1, 2, 3, 4, ..., n-1 belongs to S` implies `n belongs to S`.
@@ -40,3 +40,12 @@ We say `d` *divides* `n` and we write `d | n` if `n = cd` for some `c`, where `d
 9. `d | n` and `n != 0` implies `|d| <= |n|`
 9. `d | n` and `n | d` implies `|d| = |n|`
 10. `d | n` and `d != 0` implies `(n/d) | n`
+
+## Greatest Common Divisor
+
+If an integer `d` divides two integers a and b, then d is called *Common Divisor* of a and b.
+
+### Teorem:
+    Let `a` and `b` be integers, exists a common divisor `d` of `a` and `b`,
+    such that: `d = ax + by`, where `x` and `y` are integers and every divisor of
+    `a` and `b` divides `d`.
