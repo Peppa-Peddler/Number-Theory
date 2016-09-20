@@ -125,6 +125,7 @@ we have '(a, b) = (a - b, b)'.
 ###Algorithm:
 
 ```haskell
-    gcd a 0 = a
-    gcd a b = gcd b (mod a b)
+gcd a 0 = a
+gcd a b = gcd b (mod a b)
 ```
+[c++](codes/euclides.cpp) [clojure](codes/euclides.clj)
