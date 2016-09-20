@@ -113,8 +113,9 @@ Let `a' ≡ a (mod m)` and `b' ≡ b (mod m)`:
 3. `a - b ≡ a' - b' (mod m)`
 4. `ab ≡ a' b' (mod m)`
 5. `a ≡ b (mod m)` implies `ka ≡ kb (mod m)`
-6. `a ≡ b (mod m)` implies `a^n ≡ b^n (mod m)`
-7. If `a ≡ b (mod m)`, then `P(a) ≡ P(b)`, for `P(x)` a *polynomial*.
+6. If `k` and `m` are coprimes, then `ka ≡ kb (mod m)` implies `a ≡ b (mod m)`
+7. `a ≡ b (mod m)` implies `a^n ≡ b^n (mod m)`
+8. If `a ≡ b (mod m)`, then `P(a) ≡ P(b)`, for `P(x)` a *polynomial*.
 
 ## Euclidean Algorithm
 
@@ -142,3 +143,19 @@ then `x'b + y'( a - [a / b]b ) = (a , b)` (*Division theorem*) we end up with
 `b(x' - y'[a/b]) + ay' = (a, b)`. We finally have `x = y'` and `y = ( x' - y'[a/b] )`
 
 Code: [[c++](codes/euclides_extended.cpp)]
+
+## Fermat's little theorem
+
+**theorem:** `a^p ≡ a (mod p)` where `p` is *prime*.
+
+*Proofs:* [wiki](https://en.wikipedia.org/wiki/Proofs_of_Fermat%27s_little_theorem)
+
+A variation of this theorem is when `a` is not divisible by `p`, then we can
+divide both sides by a: `a^(p-1) ≡ 1 (mod p)`.
+
+*Proof* of `a^(p-1) = 1 (mod p)` with `p` prime and `a` not divisible by `p`:
+Let `S = {1, 2, 3, ..., p - 1}` and `i` and `j` two elements of `S`, if `ia ≡ ja (mod p)`
+then `i ≡ j (mod p)` and since `i, j < p` we have `i = j`. This means if `i !=
+j` then `ia != ja (mod p)`, with this we have `1a x 2a x 3a ... (p-1)a ≡ 1 x 2
+3 ... (p-1) (mod p)`, then `(p-1)! a^(p-1) ≡ (p-1)! (mod p)`. Since p is prime
+`((p-1)!,p) = 1`. We end up with `a^(p-1) ≡ 1 (mod p)`.
