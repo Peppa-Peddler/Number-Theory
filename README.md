@@ -99,9 +99,9 @@ by `n`.
 **Calculation:** from the *Division theorem* we have: `a mod n = a - [a / b]b`,
 where `[x]` is the `floor` operator.
 
-### Congruence
+### Congruence Modulo
 
-`a ≡ b (mod m)` (which is read as *a is congruent to b module m*) if `a mod m = b mod b`.
+`a ≡ b (mod m)` (which is read as *'a' is congruent to 'b' module 'm'*) if `a mod m = b mod b`.
 
 Let `a' ≡ a (mod m)` and `b' ≡ b (mod m)`:
 
@@ -110,5 +110,21 @@ Let `a' ≡ a (mod m)` and `b' ≡ b (mod m)`:
 3. `a - b ≡ a' - b' (mod m)`
 4. `ab ≡ a' b' (mod m)`
 5. `a ≡ b (mod m)` implies `ka ≡ kb (mod m)`
-6. `a ≡ b (mod m)` implies 'a^n ≡ b^n (mod m)'
+6. `a ≡ b (mod m)` implies `a^n ≡ b^n (mod m)`
 7. If `a ≡ b (mod m)`, then `P(a) ≡ P(b)`, for `P(x)` a *polynomial*.
+
+## Euclidean Algorithm
+
+**Theorem:** `(a, b) = (b, a mod b)`
+
+*Proof:* Since `a mod b = a - kb` (see division theorem), It's enough to proof
+that `(a, b) = (a - b, b)`. Let `d = (a, b)` and `e = (a - b, b)`, then `d | a - b`, so `d | e`
+with `d <= e` (1). Since `e | a - b` and `e | b`, then `e | a` and we have `e <= d` (2). From (1) and (2)
+we have '(a, b) = (a - b, b)'.
+
+###Algorithm:
+
+```haskell
+    gcd a 0 = a
+    gcd a b = gcd b (mod a b)
+```
