@@ -127,8 +127,18 @@ we have `(a, b) = (a - b, b)`.
 
 ###Algorithm:
 
+[[c++](codes/euclides.cpp)] [[clojure](codes/euclides.clj)]
+
 ```haskell
 gcd a 0 = a
 gcd a b = gcd b (mod a b)
 ```
-[[c++](codes/euclides.cpp)] [[clojure](codes/euclides.clj)]
+
+###Extended algorithm:
+The extended algorithm returns the value of `x` and `y` from the *Bézout's identity*: `ax + by = (a, b)`.
+
+**Solution:** Given `x'` and `y'` from `x'b + y'(a mod b) = (b , a mod b) = (a, b)`,
+then `x'b + y'( a - [a / b]b ) = (a , b)` (*Division theorem*) we end up with
+`b(x' - y'[a/b]) + ay' = (a, b)`. We finally have `x = y'` and `y = ( x' - y'[a/b] )`
+
+Code: [[c++](codes/euclides_extended.cpp)]
