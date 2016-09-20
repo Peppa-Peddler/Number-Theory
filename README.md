@@ -43,8 +43,17 @@ We say `d` *divides* `n` and we write `d | n` if `n = cd` for some `c`, where `d
 
 ## Greatest Common Divisor
 
-If an integer `d` divides two integers a and b, then d is called *Common Divisor* of a and b.
+If an integer `d` divides two integers `a` and `b`, then `d` is called *Common Divisor* of `a` and `b`.
 
 **Teorem:** Let `a` and `b` be integers, exists a common divisor `d` of `a` and `b`, such that: `d = ax + by`, where `x` and `y` are integers and every divisor of `a` and `b` divides `d`.
 
 `d` is called the *Greatest Common Divisor* of `a` and `b` and is denoted as `gcd(a, b)` or just `(a, b)`. The *diofantic equation* `d = ax + by` is called **Bézout's identity**.
+
+### Properties:
+
+1. `(a, b) = (b ,a)` (Commutativity)
+2. `(a, (b, c)) = ((a, b), c)` (Asociativity)
+2. `(ac, bc) = |c|(a, b)` (Distributivity)
+2. `(a, 1) = (1, a) = 1`, `(a, 0) = (0, a) = |a|`
+
+**Euclides Lema:** if `a | bc` and `(a, b) = 1`, then `a | c`.
