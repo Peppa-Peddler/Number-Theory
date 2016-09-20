@@ -1,6 +1,14 @@
 # Number Theory
 > The branch of mathematics that deals with the properties and relationships of numbers, especially the positive integers.
 
+## Table of contents
+
+1. [Integer Numbers] (#integer-numbers)
+2. [Peano axioms] (#peano-axioms)
+3. [Divisibility] (#divisibility)
+4. [Greatest Common Divisor] (#greatest-common-divisor)
+5. [Prime Numbers] (#prime-numbers)
+
 ## Integer numbers
 > An integer is a number that can be written without a fractional component
 
@@ -69,4 +77,4 @@ itself. If `n > 1` and is not prime, then is called 'composite'.
 2. There exists and infinity of prime numbers.
 3. If a prime `p` doesn't divide `a`, then `(p,a) = 1`
 4. If `p` is prime and `p | ab`, then `p | a` or `p | b`. In general if `p |
-   a1 ... an`, then there is at lease one i such that `p | ai`.
+   a1 ... an`, then there is at least one `i` such that `p | ai`.
