@@ -11,9 +11,9 @@
 6. [Fundamental Theorem of Arithmetic] (#fundamental-theorem-of-arithmetic)
 7. [Modulo Operation] (#modulo-operation)
 8. [Euclidean Algorithm] (#euclidean-algorithm)
-0. [Fermat's little theorem] (#fermats-little-theorem)
-8. [Modular exponentiation] (#modular-exponentiation)
-8. [Modular inverses] (#modular-inverses)
+9. [Fermat's little theorem] (#fermats-little-theorem)
+10. [Modular exponentiation] (#modular-exponentiation)
+11. [Modular inverses] (#modular-inverses)
 
 ## Integer numbers
 > An integer is a number that can be written without a fractional component
