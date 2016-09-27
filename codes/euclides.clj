@@ -1,4 +1,2 @@
 (defn gcd [a b]
-  (cond
-    (= b 0) a
-    :else (gcd b (rem a b))))
+  (if (zero? b) a (recur b (rem a b))))
