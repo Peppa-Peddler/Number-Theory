@@ -5,7 +5,7 @@ int euclid (int a, int b, int & x, int & y) {
     }
     int xo, yo;
     int d = euclid( b , a%b , xo , yo );
-    x = yo - (b / a) * xo;
-    y = xo;
+    y = xo - (a / b) * yo;
+    x = yo;
     return d;
 }
